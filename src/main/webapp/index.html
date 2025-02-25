@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration</title>
+    <style type="text/css">
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-box {
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+p {
+    margin-top: 15px;
+}
+
+.hidden {
+    display: none;
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-box">
+            <h2 id="form-title">Login</h2>
+
+            <form id="auth-form" action="LoginServ" method="post">
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" name="userid" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" name="pass" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+
+            <p id="toggle-text">Don't have an account? <a href="register.html" id="toggle-form">Register</a></p>
+        </div>
+    </div>
+
+
+</body>
+</html>
