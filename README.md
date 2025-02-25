@@ -1,4 +1,5 @@
-<img src="https://github.com/user-attachments/assets/4b890395-7275-4c87-809e-98ccf8438ab0" width="100%">
+<img src="![gidy top](https://github.com/user-attachments/assets/37e1a035-f006-451b-a6b0-a945c2426e63)
+" width="100%">
 
 
 # 🎉 College Event Hub 🎭  
