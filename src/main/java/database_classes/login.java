@@ -6,32 +6,35 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Entity
-@Table(name="UserDetails")
-public class login {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
-    public int getId() {
-        return id;
-    }
-    public void setId(int id) {
-        this.id = id;
-    }
-    String emailid;
-    public String getEmailid() {
-        return emailid;
-    }
-    public void setEmailid(String emailid) {
-        this.emailid = emailid;
-    }
-    String pass;
-    public String getPass() {
-        return pass;
-    }
-    public void setPass(String pass) {
-        this.pass = pass;
-    }
 
-    
+@Entity
+@Table(name="Userdetails")
+public class Login {
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+int id;
+
+String email;
+String pass;
+public Login() {
+	// TODO Auto-generated constructor stub
+}
+public int getId() {
+	return id;
+}
+public void setId(int id) {
+	this.id = id;
+}
+public String getEmail() {
+	return email;
+}
+public void setEmail(String email) {
+	this.email = email;
+}
+public String getPass() {
+	return pass;
+}
+public void setPass(String pass) {
+	this.pass = pass;
+}
 }

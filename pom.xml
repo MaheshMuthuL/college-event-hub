@@ -5,54 +5,63 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com</groupId>
-  <artifactId>EmployeeManagement</artifactId>
+  <artifactId>Event_management</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <dependencies>
-    <!-- MySQL Connector -->
-    <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
-      <version>8.0.32</version>
-    </dependency>
+ <dependencies>
+  
+<!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
+<!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
+<dependency>
+    <groupId>org.hibernate.orm</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>6.1.7.Final</version>
+</dependency>
 
-    <!-- Hibernate Core -->
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-core</artifactId>
-      <version>6.1.7.Final</version>
-    </dependency>
 
-    <!-- Hibernate Validator -->
-    <dependency>
-      <groupId>org.hibernate.validator</groupId>
-      <artifactId>hibernate-validator</artifactId>
-      <version>8.0.1.Final</version>
-    </dependency>
 
-    <!-- Jakarta Servlet API -->
-    <dependency>
-      <groupId>jakarta.servlet</groupId>
-      <artifactId>jakarta.servlet-api</artifactId>
-      <version>6.0.0</version>
-      <scope>provided</scope>
-    </dependency>
+ <dependency>
+        <groupId>jakarta.persistence</groupId>
+        <artifactId>jakarta.persistence-api</artifactId>
+        <version>3.1.0</version>
+</dependency>
 
-    <!-- Jakarta Servlet JSP API -->
-    <dependency>
-      <groupId>jakarta.servlet.jsp</groupId>
-      <artifactId>jakarta.servlet.jsp-api</artifactId>
-      <version>3.1.1</version>
-      <scope>provided</scope>
-    </dependency>
+<dependency>
+<groupId>jakarta.servlet</groupId>
+<artifactId>jakarta.servlet-api</artifactId>
+<version>5.0.0</version>
+</dependency>
 
-    <!-- Tomcat Servlet API -->
-    <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-servlet-api</artifactId>
-      <version>10.1.28</version>
-    </dependency>
+<dependency>
+<groupId>org.hibernate.validator</groupId>
+<artifactId>hibernate-validator</artifactId>
+<version>8.0.1.Final</version>
+</dependency>
 
-  </dependencies>
+<dependency>
+<groupId>jakarta.servlet.jsp</groupId>
+<artifactId>jakarta.servlet.jsp-api</artifactId>
+<version>3.0.0</version>
+</dependency>
+
+<dependency>
+<groupId>org.apache.tomcat</groupId>
+<artifactId>tomcat-servlet-api</artifactId>
+<version>10.1.28</version>
+</dependency>
+
+<dependency>
+<groupId>org.glassfish.web</groupId>
+<artifactId>jakarta.servlet.jsp.jstl</artifactId>
+<version>2.0.0</version>
+</dependency>
+
+<dependency>
+<groupId>mysql</groupId>
+<artifactId>mysql-connector-java</artifactId>
+<version>8.0.32</version>
+</dependency>
+
+ </dependencies>
 
 </project>

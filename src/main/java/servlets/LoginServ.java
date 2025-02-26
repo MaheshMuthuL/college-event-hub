@@ -24,7 +24,7 @@ public class LoginServ extends HttpServlet {
 		}
 		HttpSession session=request.getSession();
 		session.setAttribute("user",email);
-		request.getRequestDispatcher("Home.jsp").forward(request, response);		
+		request.getRequestDispatcher("Home.html").forward(request, response);		
 		
 	}
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{

@@ -10,10 +10,16 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 public class HBUtil {
    private static StandardServiceRegistry registry;
    private static SessionFactory session;
-   public static SessionFactory getSesssionFactory() {
-	   registry=new StandardServiceRegistryBuilder().configure("Hibernate.cfg.xml").build();
-	   Metadata md=new MetadataSources(registry).buildMetadata();
-	   session=md.buildSessionFactory();
-	   return session;
-   }
+   public static SessionFactory getSessionFactory() {
+	    try {
+	        registry = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();
+	        Metadata md = new MetadataSources(registry).buildMetadata();
+	        session = md.buildSessionFactory();
+	        return session;
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        throw new RuntimeException("Error initializing Hibernate session factory");
+	    }
+	}
+
 }

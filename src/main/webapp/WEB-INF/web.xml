@@ -9,13 +9,4 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
-    <servlet-name>RegisterServ</servlet-name>
-    <servlet-class>servlets.RegisterServ</servlet-class>
-</servlet>
-
-<servlet-mapping>
-    <servlet-name>RegisterServ</servlet-name>
-    <url-pattern>/RegisterServ</url-pattern>
-</servlet-mapping>
 </web-app>

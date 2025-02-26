@@ -3,7 +3,7 @@ package servlets;
 import java.io.IOException;
 
 import Dao.Userdao;
-import database_classes.login;
+import database_classes.Login;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -13,7 +13,7 @@ import jakarta.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class RegisterServ
  */
-@WebServlet("/Register")
+@WebServlet("/register")
 public class RegisterServ extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -29,11 +29,14 @@ public class RegisterServ extends HttpServlet {
 		String email=request.getParameter("userid");
 		String pass=request.getParameter("pass").trim();
 		String repass=request.getParameter("repass").trim();
+		System.out.println("Datas recieved successfully");
 		if(pass.equals(repass)) {
-		login user=new login();
-		user.setEmailid(email);
+		Login user=new Login();
+		System.out.println("login object created");
+		user.setEmail(email);
 		user.setPass(pass);
 		Userdao u=new Userdao();
+		System.out.println("dao implements");
 		u.save(user);
 		response.sendRedirect("index.html");
 		return;

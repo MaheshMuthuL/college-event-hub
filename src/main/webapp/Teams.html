@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navbar */
+        .navbar {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            margin-top: 50px;
+            flex-grow: 1; /* Push footer to bottom */
+        }
+
+        /* Team Cards */
+        .team-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: 0.3s;
+            background: white;
+        }
+
+        .team-card:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .btn-new-team {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #007bff;
+            color: #007bff;
+            background: #f8f9fa;
+            border-radius: 10px;
+            height: 100px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-new-team:hover {
+            background: #e2e6ea;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="Home.html">Campus Connect</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Teams.html">Teams</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Teams Section -->
+    <div class="container">
+        <h2 class="text-center mb-4">Your Teams</h2>
+        
+        <div class="row" id="teamsContainer">
+            <!-- Predefined Teams -->
+            <div class="col-md-4">
+                <div class="team-card" onclick="openTeam('Project Team')">
+                    <div class="team-title">🏢 Project Team</div>
+                    <p class="text-muted">Work on company projects together.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="team-card" onclick="openTeam('Hackathon Team')">
+                    <div class="team-title">🚀 Hackathon Team</div>
+                    <p class="text-muted">Compete in coding hackathons.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="team-card" onclick="openTeam('Sports Team')">
+                    <div class="team-title">⚽ Sports Team</div>
+                    <p class="text-muted">Your football or cricket team.</p>
+                </div>
+            </div>
+
+            <!-- New Team Button -->
+            <div class="col-md-4">
+                <div class="btn-new-team" onclick="addNewTeam()">
+                    ➕ Create New Team
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Event Registration Portal. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function openTeam(teamName) {
+            alert("Opening " + teamName);
+        }
+
+        function addNewTeam() {
+            let teamName = prompt("Enter new team name:");
+            let leader=prompt("Enter the leader name :");
+            let member2=prompt("Enter the member name2: ");
+            let member1=prompt("Enter the name of the member1:");
+            if (teamName && member1) {
+                let newTeam = `
+                    <div class="col-md-4">
+                        <div class="team-card" onclick="openTeam('${teamName}')">
+                            <div class="team-title">🆕 ${teamName}</div>
+                            <div class="leader">${leader}</div>
+                            <div class="member1">${member1}</div>
+                            <div class="member2">${member2}</div>
+                            <p class="text-muted">Newly created team.</p>
+                        </div>
+                    </div>`;
+                
+                document.getElementById('teamsContainer').insertAdjacentHTML('beforeend', newTeam);
+            }
+        }
+    </script>
+
+</body>
+</html>
